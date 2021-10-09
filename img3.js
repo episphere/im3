@@ -1,0 +1,1 @@
+console.log('img3.js loaded')
