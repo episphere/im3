@@ -15,9 +15,10 @@ if (typeof (define) != 'undefined') {
 }
 */
 
-img3 = import('https://episphere.github.io/img3/img3Mod.js')
+(async function(){
+    img3 = await import('https://episphere.github.io/img3/img3Mod.js')    
+})()
 
 if (typeof (define) != 'undefined') {
-    var fun = function(){return ':-)'}
-    define(img3)
+    define(import('https://episphere.github.io/img3/img3Mod.js'))
 }
