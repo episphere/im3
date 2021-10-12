@@ -5,6 +5,19 @@ function img2Read(imgUrl='https://storage.googleapis.com/imagebox_test/Slide-002
     return im
 }
 
-export {img2Read}
+function imgReadData(img){ // read image data
+    //document.body.appendChild(img)
+    let cv = document.createElement('canvas')
+    //document.body.appendChild(cv)
+    cv.width=img.width
+    cv.height=img.height
+    let ctx=cv.getContext('2d')
+    //img.crossOrigin = "Anonymous"
+    ctx.drawImage(img,0,0)
+    return ctx.getImageData(0,0,cv.width,cv.height)
+    //return ctx
+}
+
+export {img2Read,imgReadData}
 
 
