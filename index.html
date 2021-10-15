@@ -11,8 +11,12 @@
     <p>Example,<code>document.body.appendChild(img3.img2Read())</code>:</p>
     </body>
     <script>
-        document.body.onload=function(){
-            document.body.appendChild(img3.img2Read())
+        document.body.onload=async function(){
+            async function loadImg(){
+                return await img3.img2Read()
+            }
+            let img = await loadImg()
+            document.body.appendChild(img)
         }
     </script>
 </html>

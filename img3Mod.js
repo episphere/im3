@@ -31,7 +31,7 @@ function imgData2Array(imData){
     // extract rgba quads
     let rgba = range(imData.data.length/4).map(i=>imData.data.slice(i*4,i*4+4))
     // fold into a 2d array
-
+    // debugger
     /*
     let 2dArr=([...Array(imData.height)].map((_,i)=>i)).map(i=>{
         return ([...Array(imData.width)].map((_,j)=>j)).map(j=>{
